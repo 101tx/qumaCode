@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>编程游戏</title>
+        <meta name="keywords" content="编程游戏"/>
+        <meta name="description" content="编程游戏"/>
+    <link rel="shortcut icon" href="./res/cc.ico"></link>
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background:rgb(254, 248, 239);
+			color: #fff;
+			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
+			text-align: center;
+			height:100%
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+			margin: auto 0;
+			border-radius:8px;
+			background:url('res/bj0.jpg');
+			background-repeat:no-repeat;
+			background-position: center;
+			background-size:cover;
+			
+		}
+		span{
+			font-family: simhei;
+			color:#000000;
+			
+		}
+
+		.bt{
+		color:rgb(173, 111, 42);
+		width:58px;
+		height:20px;
+		background:rgb(254, 248, 239);
+	    border:0px solid #ad6f2a;
+		border-radius:3px;
+		font-weight:bold;
+		}
+		.bt_top{
+		color:rgb(173, 111, 42);
+		width:58px;
+		height:58px;
+		background:transparent;
+	    border:0px solid #ad6f2a;
+		border-radius:30px;
+		font-weight:bold;
+		font-size:18px;
+		}
+        .top_word{
+			color:rgb(173, 111, 42);
+		font-weight:bold;
+		font-size:18px;
+		}
+
+		
+		.bt1{
+		color:rgb(173, 111, 42);
+		width:58px;
+		height:20px;
+		background:rgb(254, 248, 239);
+		border:0px solid #ad6f2a;
+		border-radius:3px;
+		font-weight:bold;
+		
+		}
+		.titles{
+		color: #ad6f2a;
+		font-size:18px;
+		}
+       .m-wrap{
+	    width: 80px;
+		height:35px;
+		padding: 2px 0;
+	   	color: #ad6f2a;
+		font-size:15px;
+		font-weight:blod;
+		background:#ffd236;
+		border:0;
+	   
+	   }
+		
+
+	</style>
+
+		
+	</head>
+
+<body>
+   <div style="border-radius:3px;border:1px solid #ffd236;width:100%;height:8%;background: #ffd236;text-align:left;">
+ 
+ 
+  
+                                            <div class="top_word"> 地图切换
+                                                <select id="selectv" class="m-wrap"  onChange="selectChang(this);">
+                                                    <option value="0">第一章</option>
+                                                    <option value="1">第二章</option>
+                                                    <option value="2">第三章</option>
+													<option value="3">第四章</option>
+													<option value="4">第五章</option>
+													<option value="5">第六章</option>
+                                                </select>
+                                                <span class="select-hide-span" >
+                                                    <b class="select-show-b"  ></b></span>
+													&nbsp&nbsp&nbsp<input class="bt_top"  type="button" value="restart" onclick="restart()">
+                                            </div>
+  
+   </div>
+ 
+   <div  id="canv" style="border-radius:8px;width:900px;height:580;border:2px solid orange"></div>
+
+
+    <form style="position:relative;top:-84.2%;left:904px;width:375px;height:83.5%;border:2px solid orange;border-radius:5px">
+	 <div style="border:1px solid   #ffd236;width:100%;"> 
+   <input class="bt"  type="button" onclick="djcmd(this);" value="up">
+   <input class="bt"  type="button"  onclick="djcmd(this);" value="down">
+   <input class="bt"  type="button" onclick="djcmd(this);"  value="left"><br>
+   <input class="bt"  type="button"  onclick="djcmd(this);"  value="right">
+   <input class="bt"  type="button" onclick="djcmd(this);" value="fire">
+   <input class="bt"  type="button" onclick="djcmd(this);" value="stop"><br>
+   <input class="bt"  type="button" onclick="djcmd(this);" value="repeat">
+   <input class="bt"  type="button" onclick="djcmd(this);" value="back">
+   </div>
+  
+  <textarea   id="code" name="code">//请输入代码</textarea>
+  <!-- <p style="color:orange">TIP:在上面输入代码,或者点击按钮选<br>用快捷输入</p><br>-->
+   <div style="border:1px solid  #ffd236;width:100%">
+    <input id="start" class="bt1"  type="button" value="开始" onclick="getCmd();">
+    <input id="clear" class="bt1"  type="button" value="清空" onclick="clearqk();">
+	<input id="action" class="bt1"  type="button" value="执行" onclick="actions();">
+   </div>
+  
+  
+  
+  </form>
+			<script type="text/javascript" src="./lib/phaser.min.js"></script>
+			
+			<script type="text/javascript" src="./lib/codemirror.js"></script>
+		     <link rel="stylesheet" href="lib/codemirror.css">
+			 <script type="text/javascript" src="./lib/sublime.js"></script>
+            <script type="text/javascript" src="./lib/main.js"></script>
+
+		
+
+</body> 
+</html> 

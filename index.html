@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>编程游戏</title>
+    <meta name="keywords" content="编程游戏"/>
+    <meta name="description" content="编程游戏"/>
+    <link rel="shortcut icon" href="./res/cc.ico"></link>
+    <!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+    <meta name="viewport"
+          content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+</head>
+
+<body>
+
+<div id="cmd_d" style="display: none">
+    <div id="cmd_all_bt">
+        <input class="cmdCode_bt" style="background: chartreuse" type="button" value="left">
+        <input class="cmdCode_bt" style="background: #f37558" type="button" value="right">
+        <input class="cmdCode_bt" style="background: #ffa260" type="button" value="down">
+        <input class="cmdCode_bt" style="background: #6097ff" type="button" value="up">
+        <input class="cmdCode_bt" style="background: chartreuse" type="button" value="gunTurn">
+        <input class="cmdCode_bt" style="background: #ff58ac" type="button" value="fire">
+        <input class="cmdCode_bt" style="background: #979447" type="button" value="eat">
+        <input class="cmdCode_bt" style="background: #e16dff" type="button" value="rotate">
+        <input class="cmdCode_bt" style="background: #f37558" type="button" value="hide">
+        <input class="cmdCode_bt" style="background: #ffa260" type="button" value="display">
+        <input class="cmdCode_bt" style="background: #6097ff" type="button" value="skin">
+        <input class="cmdCode_bt" style="background: #ff58ac" type="button" value="action">
+        <input class="cmdCode_bt" style="background: #979447" type="button" value="removeAction">
+        <input class="cmdCode_bt" style="background: #e16dff" type="button" value="scale">
+    </div>
+</div>
+<textarea id="code" name="code" style="display: none">//请输入代码;</textarea>
+<div id="canv"></div>
+
+<div id="gm_bottom" style="display: none">
+    <select id="gm_map">
+
+    </select>&nbsp&nbsp&nbsp&nbsp
+    <input id="gm_start" class="cmdCode_bt1" style="background: #ff3ea5;font-size:25px" type="button" value="↻">&nbsp&nbsp&nbsp&nbsp
+    <input id="gm_action" class="cmdCode_bt1" style="background: #31ff08" type="button" value="run">&nbsp&nbsp&nbsp&nbsp
+
+    <input id="gm_clear" class="cmdCode_bt1" style="background: #d1c2ce" type="button" value="clear">&nbsp&nbsp&nbsp&nbsp
+    <input id="cmdCode_display" style="background: rgba(115,62,19,0.56)" class="cmdCode_bt1" type="button"
+           value="Dis">
+
+
+</div>
+
+
+<script type="text/javascript" src="./lib/phaser.min.js"></script>
+<script src="./lib/lib/codemirror.js"></script>
+<link rel=stylesheet href="./lib/lib/docs.css">
+<link rel="stylesheet" href="./lib/lib/codemirror1.css">
+<link rel="stylesheet" href="./lib/addon/fold/foldgutter.css">
+<link rel="stylesheet" href="./lib/addon/dialog/dialog.css">
+<link rel="stylesheet" href="./lib/theme/eclipse.css">
+<!--<script src="./lib/lib/formats.js"></script>-->
+<script src="./lib/addon/search/searchcursor.js"></script>
+<script src="./lib/addon/search/search.js"></script>
+<script src="./lib/addon/dialog/dialog.js"></script>
+<script src="./lib/addon/edit/matchbrackets.js"></script>
+<script src="./lib/addon/edit/closebrackets.js"></script>
+<script src="./lib/addon/comment/comment.js"></script>
+<script src="./lib/addon/wrap/hardwrap.js"></script>
+<script src="./lib/addon/fold/foldcode.js"></script>
+<script src="./lib/addon/fold/brace-fold.js"></script>
+<script src="./lib/mode/javascript/javascript.js"></script>
+<script src="./lib/keymap/sublime.js"></script>
+
+<script type="text/javascript" src="./lib/Config.js"></script>
+<script type="text/javascript" src="./lib/codeEditorTool.js"></script>
+<script type="text/javascript" src="./lib/DomUtil.js"></script>
+<script type="text/javascript" src="./lib/mapTool.js"></script>
+<script type="text/javascript" src="./lib/Car.js"></script>
+<script type="text/javascript" src="./lib/main.js"></script>
+
+
+</body>
+</html>
+
+
+
+

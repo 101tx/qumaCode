@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+.d1{
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    #ar {
+        width: 600px;
+        height: 400px;
+        background: #4d163f;
+        color: #fefefe;
+        font-size: 25px;
+        resize: none;
+        word-wrap:normal;
+
+    }
+
+
+
+
+
+</style>
+<script type="text/javascript">
+    function gett() {
+        var s = document.getElementById("ar");
+        var k = Math.floor(s.clientWidth / 25);
+        var ss = s.value.replace(/([^\r\n]{1,10}\b|[^\r\n]{k})(?!\r|\n)/g, "$1\r\n");
+        var sss = ss.split("\n");
+        console.log(sss);
+        return sss;
+    }
+
+
+</script>
+<body>
+<div class="d1">
+    <textarea resize="none" id="ar"></textarea>
+</div>
+
+</body>
+</html>
